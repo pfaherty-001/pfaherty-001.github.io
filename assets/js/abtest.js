@@ -1,5 +1,3 @@
-<!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
-<script>
 /* Harbor & Pine A/B test bucket: assigns the visitor to a homepage variant. */
 (function () {
   if (document.cookie.indexOf('hp_ab_variant=') === -1) {
@@ -8,4 +6,3 @@
     document.cookie = 'hp_ab_variant=' + v + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
   }
 })();
-</script>
