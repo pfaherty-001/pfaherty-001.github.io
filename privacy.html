@@ -55,12 +55,21 @@
               <script src="https://EMBED-ORIGIN/static/embed-notice/js/noticeEmbed.js" async></script>
               EMBED-ORIGIN = scheme + host of your embedded link, no path.
       -->
-      <iframe id="privacy-notice-frame"
-              data-notice-src="pfaherty123"
-              title="Privacy notice"
-              style="width:100%; min-height:600px; border:0;"></iframe>
-		<script src="https://privacy-central.securiti.ai/notice-embed/7d9a7675-7208-45ba-9492-752f29e8778a" async></script> <embed-origin>
-      <script>
+<iframe id="privacy-frame"
+        src="https://privacy-central.securiti.ai/notice-embed/7d9a7675-7208-45ba-9492-752f29e8778a"
+        style="border: none; width: 100%; height: 800px;"></iframe>
+
+<script>
+  (function () {
+    var COOKIE_NOTICE = 'https://privacy-central.securiti.ai/notice-embed/7d9a7675-7208-45ba-9492-752f29e8778a';
+    if (window.location.hash === '#cookies') {
+      document.getElementById('privacy-frame').src = COOKIE_NOTICE;
+    }
+  })();
+</script>
+<script src="https://privacy-central.securiti.ai/static/embed-notice/js/notice-embed.js" async></script>
+		
+
         (function () {
           var f = document.getElementById('privacy-notice-frame');
           var src = f.getAttribute('data-notice-src');
