@@ -94,6 +94,17 @@
 
   <!-- ===== SECURITI-FORM-CONSENT: paste the Consent Collection Code here (Session 3), immediately before </body> ===== -->
 
+                                <script src='https://cdn-prod.securiti.ai/consent/form-consent-sdk.js'></script>
+                                <script>window.addEventListener('load', function() {
+    FormConsentSDK.initialize({
+        codeGenMetadata:{"formPropertyId":"3","formSelector":"[id*=\"newsletter-form\"]","subjectIdentifiers":[{"name":"Full name","selector":"[name = \"full_name\"]","isPrimary":false},{"name":"email","selector":"[name = \"email\"]","isPrimary":true}],"consentIdentifiers":[{"type":"checkbox","name":"consent_marketing","selector":"[name = \"consent_marketing\"]","propertyId":923,"consentValue":"checked"},{"type":"checkbox","name":"consent_product_updates","selector":"[name = \"consent_product_updates\"]","propertyId":924,"consentValue":"checked"}],"consentTrigger":{"action":"submit","selector":"[name = \"subscribe_btn\"]"}},
+        url: 'https://app.securiti.ai/privaci/v1/',
+        cmpQuill:'406aefaa-22f0-4f4b-9c66-df54d3d9562a',
+        orgId:'1',
+        onConsentSuccess: null,
+        onConsentFailure: null
+    })
+})</script>
   <!-- ===== END SECURITI-FORM-CONSENT ===== -->
 </body>
 </html>
